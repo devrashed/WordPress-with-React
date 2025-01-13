@@ -1,0 +1,25 @@
+{
+  "name": "react-admin",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@wordpress/scripts": "^22.3.0"
+  },
+  "dependencies": {
+    "@wordpress/dom-ready": "^4.5.0",
+    "@wordpress/element": "^6.5.0",
+    "@wordpress/icons": "^10.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hot-toast": "^2.4.1",
+    "react-router-dom": "^6.26.2"
+  }
+}
