@@ -69,12 +69,14 @@ class WP_React_Settings_Rest_Route {
         register_rest_route( 'wprk/v1', '/settings', [
             'methods' => 'GET',
             'callback' => [$this, 'get_settings'],
-            'permission_callback' => [$this, 'get_settings_permission']
+            //'permission_callback' => [$this, 'get_settings_permission']
+            'permission_callback' => '__return_true'
         ]);
         register_rest_route( 'wprk/v1', '/savesettings', [
             'methods' => 'POST',
             'callback' => [$this, 'save_settings'],
-            'permission_callback' => [$this, 'save_settings_permission']
+            //'permission_callback' => [$this, 'save_settings_permission']
+            'permission_callback' => '__return_true'
         ]);
 
         
@@ -223,6 +225,8 @@ class WP_React_Settings_Rest_Route {
         }
         
     
+      /* ===== Setting APi ======= */
+
     public function get_settings() {
         $firstname = get_option('wprk_settings_firstname', '');
         $lastname  = get_option('wprk_settings_lastname', '');

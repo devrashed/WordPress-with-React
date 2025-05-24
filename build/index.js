@@ -7249,30 +7249,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_NewEmployee__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/NewEmployee */ "./src/components/NewEmployee.js");
 /* harmony import */ var react_hot_toast__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-hot-toast */ "./node_modules/react-hot-toast/dist/index.mjs");
 
-/* import Settings from './components/Settings';
-import React, { useState } from 'react';
-import ViewEmployee from './components/ViewEmployee';
-import toast, { Toaster } from 'react-hot-toast';
-import NewEmployee from './components/NewEmployee';
-function App() {
-   const [page, Setpage] = useState(1);
-
-  return (
-    <React.Fragment>
-            <Settings />
-            <button onClick={()=>Setpage(2)}> New</button>
-            <button onClick={()=>Setpage(3)}> Show</button>
-            {page === 1 && <Settings/> }
-            {page === 2 && <NewEmployee/>}
-            {page === 3 && <ViewEmployee/>}
-             <Toaster />
-            
-        </React.Fragment>              
-  );
-}
-
-export default App; */
-
 
 
 
@@ -7298,6 +7274,30 @@ function App() {
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_hot_toast__WEBPACK_IMPORTED_MODULE_5__.Toaster, null)));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
+
+/* import Settings from './components/Settings';
+import React, { useState } from 'react';
+import ViewEmployee from './components/ViewEmployee';
+import toast, { Toaster } from 'react-hot-toast';
+import NewEmployee from './components/NewEmployee';
+function App() {
+   const [page, Setpage] = useState(1);
+
+  return (
+    <React.Fragment>
+            <Settings />
+            <button onClick={()=>Setpage(2)}> New</button>
+            <button onClick={()=>Setpage(3)}> Show</button>
+            {page === 1 && <Settings/> }
+            {page === 2 && <NewEmployee/>}
+            {page === 3 && <ViewEmployee/>}
+             <Toaster />
+            
+        </React.Fragment>              
+  );
+}
+
+export default App; */
 
 /* import React from 'react';
 const { BrowserRouter, Routes, Route, Link } = window.ReactRouterDOM;
@@ -7344,52 +7344,6 @@ export default App; */
         ReactDOM.render(<App />, appContainer);
     }
 }); */
-
-/***/ }),
-
-/***/ "./src/components/DisplaySettings.js":
-/*!*******************************************!*\
-  !*** ./src/components/DisplaySettings.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-const DisplaySettings = () => {
-  const [settings, setSettings] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({
-    firstname: '',
-    lastname: '',
-    email: '',
-    address: ''
-  });
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-    // Fetch data from the REST API
-    axios__WEBPACK_IMPORTED_MODULE_2___default().get(`${appLocalizer.apiUrl}/wprk/v1/settings`).then(res => {
-      setSettings({
-        firstname: res.data.firstname,
-        lastname: res.data.lastname,
-        email: res.data.email,
-        address: res.data.address
-      });
-    }).catch(error => {
-      console.error("Error fetching the settings", error);
-    });
-  }, []);
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "User Information"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, "Firstname:"), " ", settings.firstname), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, "Lastname:"), " ", settings.lastname), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, "Email:"), " ", settings.email), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, "Address:"), " ", settings.address));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DisplaySettings);
 
 /***/ }),
 
@@ -11372,14 +11326,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "react-dom");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./src/App.js");
-/* harmony import */ var _components_DisplaySettings__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/DisplaySettings */ "./src/components/DisplaySettings.js");
-/* harmony import */ var _components_NewEmployee__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/NewEmployee */ "./src/components/NewEmployee.js");
 
 
 
 
 
+/* var element = document.getElementById( 'react-admin' );
+ReactDOM.render( <App />, document.getElementById( 'react-admin' ) ); */
 
+document.addEventListener('DOMContentLoaded', function () {
+  var element = document.getElementById('react-admin');
+  if (typeof element !== 'undefined' && element !== null) {
+    react_dom__WEBPACK_IMPORTED_MODULE_2___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_App__WEBPACK_IMPORTED_MODULE_3__["default"], null), document.getElementById('react-admin'));
+  }
+});
+let employee = document.getElementById('curd-admin');
+if (employee) {
+  react_dom__WEBPACK_IMPORTED_MODULE_2___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(NewEmployee, null), employee);
+}
+
+/*======= Old Code ======= */
+/* document.addEventListener( 'DOMContentLoaded', function() {
+  var element = document.getElementById( 'react-admin' );
+  if( typeof element !== 'undefined' && element !== null ) {
+      ReactDOM.render( <App />, document.getElementById( 'react-admin' ) );
+  }
+} ) */
+
+/* import DisplaySettings from './components/DisplaySettings';
+import NewEmployee from './components/NewEmployee';
+ */
 
 /* import domReady from '@wordpress/dom-ready';
 import { createRoot } from '@wordpress/element';
@@ -11393,20 +11369,18 @@ import App from './App'; */
   root.render(<App/>);
 }); */
 
-document.addEventListener('DOMContentLoaded', function () {
-  var element = document.getElementById('react-admin');
-  if (typeof element !== 'undefined' && element !== null) {
-    react_dom__WEBPACK_IMPORTED_MODULE_2___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_App__WEBPACK_IMPORTED_MODULE_3__["default"], null), document.getElementById('react-admin'));
+/* document.addEventListener( 'DOMContentLoaded', function() {
+  var element = document.getElementById( 'react-admin' );
+  if( typeof element !== 'undefined' && element !== null ) {
+      ReactDOM.render( <App />, document.getElementById( 'react-admin' ) );
   }
-});
-let settingsDiv = document.getElementById('wp-react-settings');
+} ) */
+
+/* let settingsDiv = document.getElementById('wp-react-settings');
+
 if (settingsDiv) {
-  react_dom__WEBPACK_IMPORTED_MODULE_2___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_DisplaySettings__WEBPACK_IMPORTED_MODULE_4__["default"], null), settingsDiv);
-}
-let employee = document.getElementById('curd-admin');
-if (employee) {
-  react_dom__WEBPACK_IMPORTED_MODULE_2___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_NewEmployee__WEBPACK_IMPORTED_MODULE_5__["default"], null), employee);
-}
+   ReactDOM.render(<DisplaySettings />, settingsDiv);
+}  */
 })();
 
 /******/ })()

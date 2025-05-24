@@ -1,3 +1,42 @@
+import React from 'react';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Settings from './components/Settings';
+import ViewEmployee from './components/ViewEmployee';
+import NewEmployee from './components/NewEmployee';
+import toast, { Toaster } from 'react-hot-toast';
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li> <Link to="/">Settings</Link> </li>
+            <li> <Link to="/new-employee">New Employee</Link> </li>
+            <li> <Link to="/view-employee">View Employee</Link> </li>
+          </ul>
+        </nav>
+        
+        <Routes>
+          <Route path="/" element={<Settings />} />
+          <Route path="/new-employee" element={<NewEmployee />} />
+          <Route path="/view-employee" element={<ViewEmployee />} />
+        </Routes>
+        
+        <Toaster />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
 
 /* import Settings from './components/Settings';
 import React, { useState } from 'react';
@@ -24,37 +63,6 @@ function App() {
 export default App; */
 
 
-import React from 'react';
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Settings from './components/Settings';
-import ViewEmployee from './components/ViewEmployee';
-import NewEmployee from './components/NewEmployee';
-import toast, { Toaster } from 'react-hot-toast';
-
-function App() {
-  return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li> <Link to="/">Settings</Link> </li>
-            <li> <Link to="/new-employee">New Employee</Link> </li>
-            <li> <Link to="/view-employee">View Employee</Link> </li>
-          </ul>
-        </nav>
-        
-        <Routes>
-          <Route path="/" element={<Settings />} />
-          <Route path="/new-employee" element={<NewEmployee />} />
-          <Route path="/view-employee" element={<ViewEmployee />} />
-        </Routes>
-        <Toaster />
-      </div>
-    </Router>
-  );
-}
-
-export default App;
 
 
 

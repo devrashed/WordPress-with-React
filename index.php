@@ -6,15 +6,13 @@
  * Author: Rashed khan
  */
 
- if( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
+if( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed.
 
 /**
 * Define Plugins Contants
 */
 define ( 'WPRK_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 define ( 'WPRK_URL', trailingslashit( plugins_url( '/', __FILE__ ) ) );
-
-
 
 
 add_action( 'admin_menu',  'create_admin_top_menu' );
